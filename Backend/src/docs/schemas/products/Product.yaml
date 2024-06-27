@@ -1,0 +1,55 @@
+components:
+  schemas:
+    Products:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: Id autogenerado por Mongo.
+        title:
+          type: String
+          description: Nombre del producto
+        description:
+          type: String
+          description: Descripción del producto
+        code:
+          type: String
+          description: Codigo unico del producto
+        price:
+          type: Number
+          description: Precio del producto
+        status:
+          type: Boolean
+          description: Status del producto
+        stock:
+          type: Number
+          description: Stock del producto
+        category:
+          type: String
+          description: Categoria del producto
+        thumbnail:
+          type: String
+          description: Imagenes del producto
+        owner:
+          type: String
+          description: Creador del producto
+      example:
+        products:
+          {
+            status: succes,
+            payload:
+              [
+                {
+                  _id: "65dbd3892f8d8dd003f9453a",
+                  title: Capri,
+                  description: Capri vaplex efecto engomado,
+                  code: cap1,
+                  price: 14400,
+                  status: true,
+                  stock: 100,
+                  category: capris,
+                  thumbnail: https://acdn.mitiendanube.com/stores/778/041/products/imagen_2023-10-20_120513851-e53e49efc3d78d741716978143132913-1024-1024.webp,
+                  owner: admin,
+                },
+              ],
+          }

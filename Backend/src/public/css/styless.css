@@ -1,0 +1,29 @@
+img{
+    width: 200px;
+    height: 200px;
+}
+#button{
+    margin-top: 39px;
+    width: 100%;
+}
+.column{
+    width: 50%;
+}
+.loggin{
+    width: 40%;
+}
+.mensajes{
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.titleSARol{
+    font-size: 22px;
+}
+
+label{
+    width: 100px;
+}
+.repetirPsw{
+    width: 150px;
+}

@@ -1,0 +1,31 @@
+paths:
+  /api/products/{pid}:
+    put:
+      summary: Actualizar un producto en la App. 
+      tags:
+        - Productos
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: id del producto que desea visualizar.
+          schema:
+            $type: String   
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/requestBodies/NewProducts"  
+      responses:
+        "200":
+          description: Producto actualizado con exito!
+          content:
+            text/plain:
+              schema:
+                type: object
+              example: {
+                mensaje: "El producto se actualizo exitosamente."
+              }
+        "404":
+          description: Error. No se ha podido actualizar el producto.

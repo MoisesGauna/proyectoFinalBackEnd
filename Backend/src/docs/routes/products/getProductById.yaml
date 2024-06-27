@@ -1,0 +1,37 @@
+paths:
+  /api/products/{pid}:
+    get:
+      summary: Obtiene un producto filtrado por su ID
+      tags:
+        - Productos
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: ID del producto que desea buscar.
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: Devuelve un objeto con el detalle del producto.
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                {
+                  _id: "65dbd3892f8d8dd003f9453a",
+                  title: Capri,
+                  description: Capri vaplex efecto engomado,
+                  code: cap1,
+                  price: 14400,
+                  status: true,
+                  stock: 100,
+                  category: capris,
+                  thumbnail: https://acdn.mitiendanube.com/stores/778/041/products/imagen_2023-10-20_120513851-e53e49efc3d78d741716978143132913-1024-1024.webp,
+                  owner: admin,
+                }
+        "404":
+          description: Error. No se han encontrado el producto.
+        "500":
+          description: Error inesperado en el servidor, no se pudo manejar el proceso.

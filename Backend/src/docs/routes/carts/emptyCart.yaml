@@ -1,0 +1,28 @@
+paths:
+  /empty-cart:
+    delete:
+      summary: Vaciar carrito
+      description: Permite vaciar por completo el carrito de la compra de un usuario.
+      tags:
+       - Carts
+      responses:
+        '200':
+          description: Carrito vaciado exitosamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de éxito
+        '500':
+          description: Error al vaciar el carrito
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Mensaje de error
